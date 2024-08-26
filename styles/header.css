@@ -1,0 +1,63 @@
+
+.navbar{
+    background: none;
+    font-family: Arial;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 20px;
+    color: rgb(18, 82, 138);
+    transition: color 0.3s ease;
+}
+.logo:hover{
+    color: black;
+}
+
+.btn{
+    width: 100px;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.nischal{
+    width: 100%;
+    display: flex;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+
+}
+li:hover{
+    color: rgb(18, 82, 138);
+}
+li a{
+    color: black; 
+    margin-right: 20px;
+}
+
+li:hover a{
+    color: rgb(18, 82, 138);
+}
+
+
+.resume{
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+}

@@ -1,0 +1,345 @@
+.main-body{
+display: grid;
+grid-template-columns: 1fr 615px;
+margin-top: 100px;
+align-items: center;
+}
+
+
+.about{
+margin-left: 50px;
+padding-right: 20px;
+/* padding-top: 200px; */
+text-align: left;
+}
+
+.about h1{
+font-size: 55px;
+margin-bottom: 10px;
+text-align: justify;
+}
+.about h2{
+margin-bottom: 20px;
+font-size: 20px;
+color: rgb(18, 82, 138);
+text-align: justify;
+}
+.about span{
+font-size: 45px;
+vertical-align: top;
+}
+.about p{
+    font-size: 20px;
+    text-align: justify;
+}
+.my-image{
+display: flex;
+justify-content: center;
+}
+.my-image img{
+width: 612px;
+height: 408px; 
+}
+
+.link-btn{
+margin-top: 20px;
+display: inline-block;
+}
+
+.hire{
+background-color: rgb(18, 82, 138);
+border: none;
+color: white;
+font-size: 20px;
+border-radius: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 15px;
+padding-left: 15px;
+cursor: pointer;
+margin-right: 50px;
+margin-top: 30px;
+transition: background-color 0.5s ease;
+}
+
+.hire:hover{
+background-color: white;
+color: black;
+box-shadow: 0px 0px 8px;
+}
+
+
+.download{
+background-color: white;
+color: black;
+border: 1px solid;
+font-size: 20px;
+border-radius: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 15px;
+padding-left: 15px;
+cursor: pointer;
+margin-top: 30px;
+transition: background-color 0.5s ease;
+margin-bottom: 20px;
+}
+
+.download:hover{
+    background-color: rgb(18, 82, 138);
+    color: white;
+    
+}
+
+.popup{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    display: none;
+    align-items: center;
+    text-align: center;
+}
+.wrong{
+    width: 40px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px black;
+}
+
+.popup-content{
+    height: 320px;
+    width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 0px 7px black;
+    
+}
+.txt-msg{
+    width: 300px;
+    height: 50px;
+    max-width: 400px;
+    max-height: 60px;
+}
+input{
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid gray;
+}
+.login{
+    background-color: rgb(18, 82, 138);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.login:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid;
+}
+
+.niscenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-bt{
+    display: inline-block;
+}
+
+.form-inline{
+    display: inline-block;
+}
+
+
+/* education part */
+
+.edu-details{
+    background-color: rgb(18, 82, 138);
+}
+.education{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    margin-left: 50px;
+}
+.education h2{
+    font-size: 40px;
+}
+
+.clzname-yrs{
+    font-size: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edu{
+    font-weight: bold;
+    text-align: left;
+}
+.graphic{
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+}
+.clz{
+    margin-left: 10px;
+}
+.running{
+    margin-right: 50px;
+    text-align: right;
+}
+
+
+/* skills css */
+
+.skils  {    
+    margin-top: 50px;
+    margin-left: 50px;
+    color:  rgb(18, 82, 138);
+    margin-bottom: 40px;
+    
+}
+.skils h2{
+    font-size: 35px;
+}
+.sks{
+    margin-bottom: 30px;
+}
+.lan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    font-size: 23px;
+    margin-bottom: 20px;
+
+}
+.la-ski{
+    font-weight: bold;
+}
+
+/* my work-experence */
+
+.work-experence{
+    margin-left: 50px;  
+    background-color: rgb(18, 82, 138);
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.ee{
+    color:  rgb(18, 82, 138);
+}
+
+.experence{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    
+    
+}
+
+.experence h2{
+    font-size: 35px;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.line-blue{
+    width: 100%;
+    height: 1px;
+    background-color:  rgb(18, 82, 138);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.focus{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.focus-details{
+    font-size: 17px;
+    text-align: left;
+    line-height: 47px;
+    text-align: justify;
+    margin-right: 20px;
+}
+.thick{
+    font-weight: bold;
+}
+
+/* image-slider-my-design  */
+
+
+
+.section__container {
+    max-width: var(--max-width);
+    
+    padding: 5rem 1rem;
+  }
+  .section__container a{
+    text-decoration: none;
+    color: rgb(18, 82, 138);
+  }
+
+.instagram__container {
+    overflow: hidden;
+  }
+
+.instagram__flex {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: scroll 45s linear infinite;
+  }
+  
+  .instagram__flex img {
+    max-width: 135px;
+  }
+
+  .section__header {
+    color: var(--white);
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-80% - 0.5rem));
+    }
+  }
+
+  
+
+
+  
