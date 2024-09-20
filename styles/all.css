@@ -9,3 +9,23 @@ h1, h2, p {
     font-family: Helvetica;
     margin: 0;
  }
+
+ body {
+    line-height: 1.6;
+    position: relative;
+    background-color: var(--light-color); /* Base background color */
+}
+
+body::before {
+    background-image: var(--noise-texture);
+    background-blend-mode: multiply;
+    opacity: 0.8; /* 8% opacity */
+}
+ :root {
+    --light-color: #ffffff;
+    --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+  }
+  
+button{
+    cursor: pointer;
+}

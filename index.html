@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/all.css">
     <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/project.css">
    
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
@@ -20,73 +22,65 @@
 </head>
 <body>
    <header>
-        <nav class="navbar">
-            <div class="navdiv">
-                <a class="logo" href="index.html">
-                    <!-- <button class="btn"><img src="images/logo.png" class="nischal" ></button> -->
-                    <h1>Nisch&thetasym;l</h1>
-                </a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="design.html">Design</a></li>
-                    <li><a href="photo.html">Photography</a></li>
-                    <li><i class="fa fa-download"><a href="/extra files/Nischal Khadka Resume.pdf" download class="resume">Resume</a></i></li>
-                </ul>
+    <nav class="navbar">
+        <div class="navdiv">
+            <a class="logo" href="index.html">
+                <h1>Nisch&thetasym;l</h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="photo.html">Photography</a></li>
+                <li><i class="fa fa-download"><a href="/extra files/Nischal Khadka Resume.pdf" download class="resume">Resume</a></i></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa fa-bars"></i>
             </div>
+        </div>
     </nav>
    </header>
 
 
     <div class="main-body">
-        <div class="about">
-            <h1>
-                Hi, <span>&#124;</span>'m Nischal Khadka
-            </h1>
-            
-            <h2>
-                Graphic designer and Frontend Developer
-            </h2>
-            <p>
-                A undergraduate student pursuing a B.Sc. in Computing and Information 
-                Technology. width over two years of experience in graphic design, including freelance work 
-                and a marketing office role.
-            </p>
-            <div class="link-btn">
-                <div class="link-bt">
-                    <button class="hire" id="hire-btn">Hire me</button>
-                </div>
-                <form action="https://formsubmit.co/cpboys11@gmail.com" method="POST" class="form-inline">
-                    <div class="popup" id="popup">
-                        <div class="popup-content">
-                            <img class="wrong" src="extra files/cross.svg" alt="">
-                            <input type="text" name="name" required placeholder="Name">
-                            <input type="email" name="email" required placeholder="Email">
-                            <input type="text" name="subject" required placeholder="Job Possion">   
-                            <textarea name="message"  required placeholder="Details" class="txt-msg"></textarea>
-                            <input type="hidden" name="_captcha" value="false">
-                            <div class="niscenter">
-                                <button class="login" type="submit"> Send </button>
+
+        <div class="about-container">
+            <div class="about">
+                <h1>Hi, I'm Nischal Khadka</h1>
+                <h2 id="animated-text">Graphic designer and Frontend Developer</h2>
+                <p>
+                    A undergraduate student pursuing a B.Sc. in Computing and Information Technology. With over two years of experience in graphic design, including freelance work and a marketing office role.
+                </p>
+                <div class="link-btn">
+                    <div class="link-bt">
+                        <button class="hire" id="hire-btn">Hire me</button>
+                    </div>
+                    <form action="https://formsubmit.co/cpboys11@gmail.com" method="POST" class="form-inline">
+                        <div class="popup" id="popup">
+                            <div class="popup-content">
+                                <img class="wrong" src="extra files/cross.svg" alt=""> <br>
+                                <input type="text" name="name" required placeholder="Name">
+                                <input type="email" name="email" required placeholder="Email">
+                                <input type="text" name="subject" required placeholder="Job Position">
+                                <textarea name="message" required placeholder="Details" class="txt-msg"></textarea>
+                                <input type="hidden" name="_captcha" value="false">
+                                <div class="niscenter">
+                                    <button class="login" type="submit">Send</button>
+                                </div>
                             </div>
                         </div>
-                </form>
+                    </form>
+                    <a href="extra files/Nischal Khadka Resume.pdf" download>
+                        <button class="download">Download Resume</button>
+                    </a>
                 </div>
-                <script>
-                    document.getElementById("hire-btn").addEventListener("click", function(){
-                    document.getElementById("popup").style.display = "flex";
-                    });
-                    document.querySelector('.wrong').addEventListener('click', function(){
-                    document.getElementById('popup').style.display = 'none';
-                    });
-            
-                </script>
-                <a href="extra files/Nischal Khadka Resume.pdf" download>
-                    <button class="download">Download Resume</button>
-                </a>
+            </div>
+        
+            <div class="my-image">
+                <img class="nniiss" src="images/Nischal Khadka.jpg" alt="Description">
             </div>
         </div>
-        <div class="my-image">
-            <img src="images/about-photo-my-no bg.png" alt="Description">
-        </div>
+        
+        
     </div>
     
         <div class="edu-details">   
@@ -94,7 +88,7 @@
                 <h2>
                     My Education
                 </h2>
-                <div class="line"></div>
+                <div class="line-blue"></div>
                 <div class="clzname-yrs">
                     <p>
                         <span class="edu">Pursuing BSc&#40;Hons&#41; cIT</span>&#44; <span class="clz">Birmingham City University &#40;BCU&#41;</span>
@@ -111,149 +105,277 @@
                         &#40;Completed in 2021&#41;
                     </p>
                 </div>
-                <p>
+                <p class="high-school">
                     High School Degree In computer science
                 </p>
             </div>
         </div>
-    <div class="skils">
-          <div class="sks">
-            <h2>
-                My Skills
-              </h2>
-              <div class="line-blue"></div>
-          </div>
-          <div class="lan">
-            <div>
-                <p class="la-ski">
-                    Languages and skills
-                </p>
-            </div>
-            <div>
-                <p>
-                    HTML&#44; CSS&#44; Python&#44; Git&#44; Github&#44; AWS&#44; Google Cloud Platform&#40;GCP&#41;
-                </p>
-            </div>
-          </div>
-          <div class="lan">
-            <div>
-                <p class="la-ski">
-                    Professional Tools &#40;Adobe&#41;
-                </p>
-            </div>
-            <div>
-                <p>
-                    Photoshop&#44; Premiere Pro&#44; Illustrator&#44; After Effects&#44; Audition&#40;basic&#41;
-                </p>
-            </div>
-          </div>
-          <div class="lan">
-            <div>
-                <p class="la-ski">
-                    Microsoft Office tools
-                </p>
-            </div>
-            <div>
-                <p>
-                    Word&#44; Power Point&#44; Excel
-                </p>
-            </div>
-          </div>
-          <div class="lan">
-            <div>
-                <p class="la-ski">
-                    Soft Skills
-                </p>
-            </div>
-            <div>
-                <p>
-                    Communication&#44; Active Listening&#44; Adaptability&#44; Problem-Solving&#44; Persuasion
-                </p>
-            </div>
-          </div>
-    </div>
-    
-    <!-- work experience details -->
 
-    <div class="edu-details">   
-        <div class="education">
-            <h2>
-                My Experience
-            </h2>
-            <div class="line"></div>
-            <div class="Focus-Creations">
-                <div class="clzname-yrs">
-                    <p>
-                        <span class="graphic">Graphic designer</span>
-                    </p> 
-                    <p class="running">
-                        Kathmandu&#44; Nepal
-                    </p>
-                </div>
-                <p class="focus">
-                    Focus Creations
-                </p>
-                
-                <p class="focus-details">
-                    &#10004; Delivered exceptional customer service by accurately understanding client needs and preferences, ensuring per-
-                    sonalized recommendations and solutions&#46; <br>
-                    &#10004; Maintained an organized and efficient workspace, enhancing the overall customer experience and ensuring a
-                    professional presentation&#46; <br>
-                    &#10004; Demonstrated in-depth product knowledge by effectively describing features and benefits, and offering tailored
-                    recommendations to meet client requirements&#46;
-                </p>
+
+        <!-- skills section -->
+
+        <div class="skills">
+            <div class="sks">
+                <h2>My Skills</h2>
+                <div class="line-blue"></div>
             </div>
-            <div class="Moru-digital-wallet">
-                <div class="clzname-yrs">
-                    <p>
-                        <span class="graphic">Graphic designer intern</span>
-                    </p> 
-                    <p class="running">
-                        Kathmandu&#44; Nepal
+            <div class="lan">
+                <div>
+                    <p class="la-ski">Languages and Skills</p>
+                </div>
+                <div>
+                    <p>HTML, CSS, Python, Git, Github, AWS, Google Cloud Platform (GCP)</p>
+                </div>
+            </div>
+            <div class="lan">
+                <div>
+                    <p class="la-ski">Professional Tools (Adobe)</p>
+                </div>
+                <div>
+                    <p>Photoshop, Premiere Pro, Illustrator, After Effects, Audition (basic)</p>
+                </div>
+            </div>
+            <div class="lan">
+                <div>
+                    <p class="la-ski">Microsoft Office Tools</p>
+                </div>
+                <div>
+                    <p>Word, PowerPoint, Excel</p>
+                </div>
+            </div>
+            <div class="lan">
+                <div>
+                    <p class="la-ski">Soft Skills</p>
+                </div>
+                <div>
+                    <p>Communication, Active Listening, Adaptability, Problem-Solving, Persuasion</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- work experience details -->
+
+        <div class="info-section">   
+            <div class="career">
+                <h2>
+                    My Experience
+                </h2>
+                <div class="separator"></div>
+                <div class="job-details">
+                    <div class="position-duration">
+                        <p>
+                            <span class="role">Graphic designer &hyphen; Video editor</span>
+                        </p> 
+                        <p class="current">
+                            Present
+                        </p>
+                    </div>
+                    <p class="location">
+                        Remote
+                    </p>
+                    <p class="job-description">
+                        &#10004; Design Solutions&colon; Delivered high-quality designs aligned with client brand guidelines for packaging and social
+                        media&#46; <br>
+                        &#10004; Video Editing&colon; Applied advanced motion graphics, speed ramping, and color grading, exceeding client expectations&#46; <br>
+                        &#10004; Client Communication&colon; Explained design concepts and benefits, ensuring alignment with brand goals and
+                        audience engagement&#46; <br>
+                        &#10004; Client Service&colon; Offered personalized design recommendations, ensuring projects matched client vision and
+                        industry trends&#46;
                     </p>
                 </div>
-                <p class="focus">
-                    Moru digital wallet
-                </p>
-                
-                <p class="focus-details">
-                    &#10004; <span class="thick">Collaborated with Creative Team&#x3a;</span> Worked alongside a dynamic team to develop visually compelling designs for
-                    various digital platforms, enhancing the overall brand presence&#46; <br>
-                    &#10004; <span class="thick">Social Media Campaigns&#x3a;</span> Conceptualized and designed engaging graphics for social media campaigns, leading
-                    to a significant increase in user engagement and brand visibility&#46; <br>
-                    &#10004; <span class="thick">Cross-Channel Design Strategy&#x3a;</span> Created cohesive design elements for multiple marketing campaigns, ensuring
-                    brand consistency across all channels&#46; <br>
-                    &#10004; <span class="thick">Technical Proficiency&#x3a;</span> Utilized industry-standard design software such as Adobe Creative Suite (Photoshop,
-                    Illustrator,) to produce high-quality design assets&#46; <br>
-                    &#10004; <span class="thick">Trend Analysis and Adaptation&#x3a;</span> Stayed up-to-date with the latest design trends and digital marketing strategies,
-                    adapting creative approaches to align with current industry standards&#46;
-                </p>
+                <div class="job-details">
+                    <div class="position-duration">
+                        <p>
+                            <span class="role">Graphic designer</span>
+                        </p> 
+                        <p class="current">
+                            Kathmandu&#44; Nepal
+                        </p>
+                    </div>
+                    <p class="location">
+                        Focus Creations
+                    </p>
+                    <p class="job-description">
+                        &#10004; Delivered exceptional customer service by accurately understanding client needs and preferences, ensuring per-
+                        sonalized recommendations and solutions&#46; <br>
+                        &#10004; Maintained an organized and efficient workspace, enhancing the overall customer experience and ensuring a
+                        professional presentation&#46; <br>
+                        &#10004; Demonstrated in-depth product knowledge by effectively describing features and benefits, and offering tailored
+                        recommendations to meet client requirements&#46;
+                    </p>
+                </div>
+                <div class="job-details">
+                    <div class="position-duration">
+                        <p>
+                            <span class="role">Graphic designer intern</span>
+                        </p> 
+                        <p class="current">
+                            Kathmandu&#44; Nepal
+                        </p>
+                    </div>
+                    <p class="location">
+                        Moru digital wallet
+                    </p>
+                    <p class="job-description">
+                        &#10004; <span class="highlight">Collaborated with Creative Team&#x3a;</span> Worked alongside a dynamic team to develop visually compelling designs for
+                        various digital platforms, enhancing the overall brand presence&#46; <br>
+                        &#10004; <span class="highlight">Social Media Campaigns&#x3a;</span> Conceptualized and designed engaging graphics for social media campaigns, leading
+                        to a significant increase in user engagement and brand visibility&#46; <br>
+                        &#10004; <span class="highlight">Cross-Channel Design Strategy&#x3a;</span> Created cohesive design elements for multiple marketing campaigns, ensuring
+                        brand consistency across all channels&#46; <br>
+                        &#10004; <span class="highlight">Technical Proficiency&#x3a;</span> Utilized industry-standard design software such as Adobe Creative Suite (Photoshop,
+                        Illustrator,) to produce high-quality design assets&#46; <br>
+                        &#10004; <span class="highlight">Trend Analysis and Adaptation&#x3a;</span> Stayed up-to-date with the latest design trends and digital marketing strategies,
+                        adapting creative approaches to align with current industry standards&#46;
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- image-slider-my-design -->
+        <div class="image-slider-my-design">
+            <section class="section__container instagram__container">
+                <div class="line-blue"></div>
+                <div class="instagram__flex">
+                  <img src="design/college-package-SMP-2-promo.png"/>
+                  <img src="design/college-package-SMP.png"/>
+                  <img src="design/light-up.png"/>
+                  <img src="design/smp-7.png"/>
+                  <img src="design/smp-for-services.png"/>
+                  <img src="design/Social-Media-Design-2.jpg"/>
+                  <img src="design/why-Nexdigo.jpg"/>
+                  <img src="design/smp-5.jpg"/>
+                </div>
+                <div class="line-blue"></div>
+            </section>
+        </div>
+        <div class="the-skill">
+            <div>
+              <h2>
+                Training & Certifications
+                </h2>
+                <div class="line-blue"></div>
+            </div>
+            
+            <div class="cert-item">
+                <h3>Agile Explorer - IBM (2024)</h3>
+                <p>I gained basic foundations of agile value, principles, and practices.</p>
+            </div>
+            <div class="cert-item">
+                <h3>Enterprise Design Thinking - IBM (2024)</h3>
+                <p>I gained basic foundations of agile value, principles, and practices.</p>
+            </div>
+            <div class="cert-item">
+                <h3>LCCI Global Qualification</h3>
+                <p>Certified in LCCI global standards and qualifications.</p>
             </div>
         </div>
     </div>
 
-    <!-- image-slider-my-design -->
-    <div class="image-slider-my-design">
-        <section class="section__container instagram__container">
-            <div class="line-blue"></div>
-            <div class="instagram__flex">
-              <img src="design/college-package-SMP-2-promo.png"/>
-              <img src="design/college-package-SMP.png"/>
-              <img src="design/light-up.png"/>
-              <img src="design/smp-7.png"/>
-              <img src="design/smp-for-services.png"/>
-              <img src="design/Social-Media-Design-2.jpg"/>
-              <img src="design/why-Nexdigo.jpg"/>
-              <img src="design/smp-5.jpg"/>
-            </div>
-            <div class="line-blue"></div>
-          </section>
+    <br>
+
+    <!-- PROJECTS-PART-START -->
+
+    <div class="PROJECTS-PART-START"></div>
+
+    <div class="my-PROJECTS">
+        <a href="">
+            <h1>MY PROJECTS</h1>
+        </a>
     </div>
-    
+
+    <div class="project-main">
+        <div class="smart-security">
+            <div>
+                <img class="security-thumnail" src="extra files/smart security system thumnail.png" alt="">
+            </div>
+            <div>
+                <h1>Smart Security system</h1>
+            </div>
+            <br>
+            <div class="all-link">
+                <div class="link">
+                    <a href="https://nischal1020.github.io/Aitm_lab-main/" target="_blank">website link</a>
+                </div>
+                <div class="link">
+                    <a href="https://github.com/Nischal1020/Aitm_lab-main" target="_blank">Github link</a>
+                </div>
+            </div>    
+          
+            <div>
+                <p class="smart-security-para">
+                    The Smart Security System is an advanced solution designed to enhance your premises&#8217; safety, using Python and
+                    cutting-edge technology. It features a warning alarm, real-time image capture, and email alerts. Built with components 
+                    like Raspberry Pi 4, a camera, and a buzzer, this system offers a comprehensive security infrastructure for your
+                    space.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="hospital-management">
+            <div>
+                <img class="hospital-thumnail" src="extra files/hospital management system thumnail.png">
+            </div>
+            <div class="head-text">
+                <h1>Hospital Management System</h1>
+            </div>
+            <div class="para-text">
+                <p><i> Made by using Python (Terminal based) </i></p>
+            </div>
+            <div>
+                <a class="hospital-git-link" href="https://github.com/Nischal1020/python_project" target="_blank">github link</a>
+            </div>
+            <div>
+                <p class="hospital-management-para">
+                    A &#8216;prototype&#8217; Hospital Management system. This system aims to maintain the medical records of the patient,
+                    maintain the contact details of the patient and keep track of the appointment dates. There are three different types
+                    of users involved in a hospital management system: admin, doctor and patient. Each of the above plays an important
+                    role in the hospital management system performing different tasks. Patients using the system can book appointments.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="graphic-design">
+            <div>
+                <img class="graphic-design-thumnail" src="extra files/graphic design thumnail.jpg" alt="">
+            </div>
+            <div>
+                <h1 class="graphic-head-bold">
+                    Graphic Design Projects
+                </h1>
+            </div>
+            <div class="graphic-butt">
+                <a href="design.html" target="_blank">Project link</a>
+            </div>
+
+            <div class="graphic-design-text">
+                <p>
+                    Having worked as a freelancer and in marketing office. Expertise with working with different company by keeping
+                there brand value and social presence in designs
+                </p>
+            </div>
+                
+        </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+    <div class="see-more-button">
+        <a href="design.html">
+            <button>
+                See more projects &#x279C;
+            </button>
+        </a>
+    </div>
+
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
-

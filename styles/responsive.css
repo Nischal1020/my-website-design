@@ -1,0 +1,110 @@
+/* Keyframes */
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-80% - 0.5rem));
+    }
+}
+
+/* Responsive Design for devices with max-width of 768px */
+@media (max-width: 768px) {
+    .sks h2, h2 {
+        font-size: 2rem;
+    }
+
+    .lan p {
+        font-size: 0.9rem;
+    }
+
+    .cert-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .cert-item p {
+        font-size: 0.9rem;
+    }
+
+    .main-body {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .about {
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .about h1 {
+        font-size: 40px;
+    }
+
+    .about h2 {
+        font-size: 18px;
+    }
+
+    .my-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .link-btn {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .hire, .download {
+        margin-right: 0;
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: right;
+        padding: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Responsive Design for devices with max-width of 480px */
+@media only screen and (max-width: 480px) {
+    .about h1 {
+        font-size: 30px;
+    }
+
+    .about h2 {
+        font-size: 16px;
+    }
+
+    .hire, .download {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 400px) {
+    .popup {
+        width: 95%; /* Increase width for smaller screens */
+    }
+}

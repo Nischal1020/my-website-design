@@ -1,0 +1,256 @@
+/* Base styles for larger screens (desktops, etc.) */
+.PROJECTS-PART-START{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(18, 82, 138);
+}
+
+.my-PROJECTS h1{
+    font-size: 50px;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.project-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns for larger screens */
+    grid-gap: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+.smart-security,
+.hospital-management,
+.graphic-design{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.smart-security:hover,
+.hospital-management:hover,
+.graphic-design:hover{
+    transform: scale(1.010);
+    box-shadow: 0 0 10px;
+}
+
+.smart-security div h1,
+.hospital-management div h1,
+.graphic-design div h1{
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.smart-security div p,
+.hospital-management-para,
+.graphic-design-text{
+    font-size: 15px;
+    color: gray;
+}
+
+.security-thumnail,
+.hospital-thumnail,
+.graphic-design-thumnail{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.all-link {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.link {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.link a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.link a:hover {
+    background-color: #444;
+}
+
+.smart-security-para, .hospital-management-para {
+    text-align: justify;
+}
+
+.graphic-butt a {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.graphic-butt a:hover{
+    background-color: #444;
+}
+
+.hospital-git-link{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hospital-git-link:hover{
+    background-color: #444;
+}
+
+.see-more-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more-button button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.see-more-button button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Add responsiveness for medium-sized screens (tablets) */
+@media (max-width: 1024px) {
+    .my-PROJECTS h1 {
+        font-size: 40px;
+    }
+    
+    .project-main {
+        grid-template-columns: 1fr 1fr; /* 2 columns for tablets */
+        margin-left: 10px;
+        margin-right: 10px;
+        grid-gap: 20px;
+    }
+    
+    .smart-security,
+    .hospital-management,
+    .graphic-design {
+        padding: 10px 15px;
+    }
+}
+
+/* Add responsiveness for small screens (mobile phones) */
+@media (max-width: 768px) {
+    .my-PROJECTS h1 {
+        font-size: 35px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .project-main {
+        grid-template-columns: 1fr; /* 1 column for mobile devices */
+        grid-gap: 15px;
+    }
+    
+    .smart-security,
+    .hospital-management,
+    .graphic-design {
+        padding: 10px 10px;
+    }
+
+    .see-more-button button {
+        font-size: 14px; /* Smaller button text for mobile */
+        padding: 8px 16px;
+    }
+}
+
+/* For extra small devices */
+@media (max-width: 480px) {
+    .my-PROJECTS h1 {
+        font-size: 28px;
+    }
+
+    .project-main {
+        grid-gap: 10px;
+    }
+    
+    .smart-security div h1,
+    .hospital-management div h1,
+    .graphic-design div h1 {
+        font-size: 22px;
+    }
+
+    .smart-security div p,
+    .hospital-management-para,
+    .graphic-design-text {
+        font-size: 14px;
+    }
+
+    .see-more-button button {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+}
+
+.see-more-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more-button a {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.see-more-button button {
+    background-color: black; /* Button background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button size */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.see-more-button button:hover {
+    background-color: #444; /* Darker background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}

@@ -1,321 +1,425 @@
-.main-body{
-display: grid;
-grid-template-columns: 1fr 615px;
-margin-top: 100px;
-align-items: center;
+.main-body {
+    display: flex;
+    grid-template-columns: 1fr 615px;
+    margin-top: 100px;
+    align-items: center;
+    grid-gap: 20px;
 }
 
-
-.about{
-margin-left: 50px;
-padding-right: 20px;
-/* padding-top: 200px; */
-text-align: left;
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.about h1{
-font-size: 55px;
-margin-bottom: 10px;
-text-align: justify;
+.about {
+    margin-left: 50px;
+    padding-right: 20px;
+    text-align: left;
 }
-.about h2{
-margin-bottom: 20px;
-font-size: 20px;
-color: rgb(18, 82, 138);
-text-align: justify;
+
+.my-image {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 50px;
 }
-.about span{
-font-size: 45px;
-vertical-align: top;
+
+.nniiss {
+    aspect-ratio: 1 / 1; /* Sets a 1:1 aspect ratio (perfect square) */
+    width: 300px; /* Defines the width */
+    border-radius: 50%; /* Makes it circular */
+    border: 3px solid black; /* Optional border */
+    object-fit: cover; /* Ensures the image fits within the circle */
 }
-.about p{
+
+.about h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(18, 82, 138);
+    text-align: justify;
+}
+
+.about span {
+    font-size: 45px;
+    vertical-align: top;
+}
+
+.about p {
     font-size: 20px;
     text-align: justify;
 }
-.my-image{
-display: flex;
-justify-content: center;
-}
-.my-image img{
-width: 612px;
-height: 408px; 
-}
 
-.link-btn{
-margin-top: 20px;
-display: inline-block;
-}
-
-.hire{
-background-color: rgb(18, 82, 138);
-border: none;
-color: white;
-font-size: 20px;
-border-radius: 5px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-right: 15px;
-padding-left: 15px;
-cursor: pointer;
-margin-right: 50px;
-margin-top: 30px;
-transition: background-color 0.5s ease;
-}
-
-.hire:hover{
-background-color: white;
-color: black;
-box-shadow: 0px 0px 8px;
-}
-
-
-.download{
-background-color: white;
-color: black;
-border: 1px solid;
-font-size: 20px;
-border-radius: 5px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-right: 15px;
-padding-left: 15px;
-cursor: pointer;
-margin-top: 30px;
-transition: background-color 0.5s ease;
-margin-bottom: 20px;
-}
-
-.download:hover{
-    background-color: rgb(18, 82, 138);
-    color: white;
-    
-}
-
-.popup{
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    top: 0;
-    display: none;
-    align-items: center;
-    text-align: center;
-}
-.wrong{
-    width: 40px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    cursor: pointer;
-    background: white;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 4px black;
-}
-
-.popup-content{
-    height: 320px;
-    width: 500px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0px 0px 7px black;
-    
-}
-.txt-msg{
-    width: 300px;
-    height: 50px;
-    max-width: 400px;
-    max-height: 60px;
-}
-input{
-    margin: 20px auto;
-    display: block;
-    width: 50%;
-    padding: 8px;
-    border: 1px solid gray;
-}
-.login{
-    background-color: rgb(18, 82, 138);
+.link-btn {
+    margin-top: 20px;
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    border: none;
-    color: white;
+    gap: 20px;
+}
+
+.form-inline {
+    display: inline-block;
+}
+
+.hire, .download, .login {
     font-size: 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
     transition: background-color 0.5s ease;
 }
 
-.login:hover{
+.hire {
+    background-color: rgb(18, 82, 138);
+    border: none;
+    color: white;
+    margin-right: 50px;
+}
+
+.hire:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 8px;
+}
+
+.download {
     background-color: white;
     color: black;
     border: 1px solid;
 }
 
-.niscenter{
+.download:hover {
+    background-color: rgb(18, 82, 138);
+    color: white;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it stays on top */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px;
+    transition: opacity 0.3s ease;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrong {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-800%);
+    transform: translatex(200%);
+    background-blend-mode: darken;
+    mix-blend-mode: screen;
+}
+
+/* Form fields styling */
+input[type="text"], input[type="email"], textarea {
+    width: 420px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+textarea.txt-msg {
+    height: 100px;
+    max-width: 450px;
+    max-height: 300px;
+}
+
+/* Button styling */
+button.login {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.login:hover {
+    background-color: #0056b3;
+}
+
+.niscenter {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.link-bt{
+.link-bt {
     display: inline-block;
 }
 
-.form-inline{
+.form-inline {
     display: inline-block;
 }
 
-
-/* education part */
-
-.edu-details{
-    background-color: rgb(18, 82, 138);
-}
-.education{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    color: white;
-    margin-left: 50px;
-}
-.education h2{
-    font-size: 40px;
+/* Education part */
+.edu-details {
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
 }
 
-.clzname-yrs{
-    font-size: 20px;
-    margin-top: 30px;
+
+.education h2 {
+    font-size: 36px;
+    text-align: left;
+    position: relative;
+    color: black;
+}
+
+
+.clzname-yrs {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
-.edu{
-    font-weight: bold;
+.high-school{
+    color: rgb(81, 77, 77);
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .education h2 {
+        font-size: 28px;
+    }
+
+    .clzname-yrs {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+
+/* Skills CSS */
+.skills {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.skills h2 {
     text-align: left;
-}
-.graphic{
-    font-weight: bold;
-    text-align: left;
-    font-size: 25px;
-}
-.clz{
-    margin-left: 10px;
-}
-.running{
-    margin-right: 50px;
-    text-align: right;
+    font-size: 2.5rem;
+    color: rgb(18, 82, 138);
+    margin-bottom: 20px;
 }
 
-
-/* skills css */
-
-.skils  {    
-    margin-top: 50px;
-    margin-left: 50px;
-    color:  rgb(18, 82, 138);
-    margin-bottom: 40px;
-    
-}
-.skils h2{
-    font-size: 35px;
-}
-.sks{
+.sks {
     margin-bottom: 30px;
 }
-.lan{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
-    font-size: 23px;
-    margin-bottom: 20px;
 
+.lan {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid rgb(18, 82, 138);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.la-ski{
+
+.lan:hover {
+    transform: scale(1.005);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgb(18, 82, 138);
+    color: white;
+}
+
+.lan p {
+    font-size: 1rem;
+    color: rgb(18, 82, 138);
+}
+
+.lan:hover p {
+    color: #e9ecef;
+}
+
+.la-ski {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #264653;
+}
+
+.lan:hover .la-ski {
+    color: white;
+}
+
+/* Work Experience */
+.info-section {
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+/* Experience title */
+.career h2 {
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.career h2::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Job details container */
+.job-details {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on job details */
+.job-details:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Position and duration styling */
+.position-duration {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.role {
+    font-weight: bold;
+    color: black;
+}
+
+.current {
+    color: black;
+}
+
+/* Location and job description */
+.location {
+    font-style: italic;
+    color: #17252a;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    font-size: 16px;
+    color: white;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.highlight {
+    color: #17252a;
     font-weight: bold;
 }
 
-/* my work-experence */
-
-.work-experence{
-    margin-left: 50px;  
-    background-color: rgb(18, 82, 138);
-    color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
-}
-.ee{
-    color:  rgb(18, 82, 138);
+/* Separator */
+.separator {
+    width: 50%;
+    height: 3px;
+    margin: 20px auto;
 }
 
-.experence{
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 40px;
-    
-    
+/* Responsive design */
+@media (max-width: 768px) {
+    .career h2 {
+        font-size: 28px;
+    }
+
+    .job-details {
+        padding: 15px;
+    }
+
+    .role {
+        font-size: 16px;
+    }
+
+    .current, .job-description {
+        font-size: 14px;
+    }
 }
 
-.experence h2{
-    font-size: 35px;
-}
-
-.line{
+.line {
     width: 100%;
     height: 1px;
     background-color: white;
     margin-bottom: 20px;
     margin-top: 10px;
 }
-.line-blue{
+
+.line-blue {
     width: 100%;
     height: 1px;
-    background-color:  rgb(18, 82, 138);
+    background-color: rgb(18, 82, 138);
     margin-bottom: 20px;
     margin-top: 10px;
 }
-.focus{
-    margin-top: 8px;
-    margin-bottom: 20px;
-}
-.focus-details{
-    font-size: 17px;
-    text-align: left;
-    line-height: 47px;
-    text-align: justify;
-    margin-right: 20px;
-}
-.thick{
+
+.thick {
     font-weight: bold;
 }
 
-/* image-slider-my-design  */
-
-
-
+/* Image Slider My Design */
 .section__container {
     max-width: var(--max-width);
-    
-    padding: 5rem 1rem;
-  }
-  .section__container a{
+    padding: 1rem 1rem;
+}
+
+.section__container a {
     text-decoration: none;
     color: rgb(18, 82, 138);
-  }
+}
 
 .instagram__container {
     overflow: hidden;
-  }
+}
 
 .instagram__flex {
     width: max-content;
@@ -323,23 +427,82 @@ input{
     align-items: center;
     gap: 1rem;
     animation: scroll 45s linear infinite;
-  }
-  
-  .instagram__flex img {
+}
+
+.instagram__flex img {
     max-width: 135px;
-  }
+}
 
-  .section__header {
+.section__header {
     color: var(--white);
-  }
-  
-  @keyframes scroll {
-    to {
-      transform: translateX(calc(-80% - 0.5rem));
+}
+
+.certifications {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cert-item {
+    background-color: #e9ecef;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid rgb(18, 82, 138);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: rgb(18, 82, 138);
+}
+
+.cert-item p {
+    font-size: 1rem;
+    color: rgb(18, 82, 138);
+}
+
+.cert-item:hover {
+    transform: scale(1.005);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgb(18, 82, 138);
+    color: white;
+}
+
+.cert-item:hover h3 {
+    color: white;
+}
+
+.cert-item:hover p {
+    color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
     }
-  }
 
-  
+    .cert-item h3 {
+        font-size: 1.5rem;
+    }
 
+    .cert-item p {
+        font-size: 0.9rem;
+    }
+}
 
-  
+.the-skill {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: rgb(18, 82, 138);
+    margin-bottom: 40px;
+}
+
+.the-skill h2 {
+    font-size: 35px;
+}
